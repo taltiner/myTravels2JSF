@@ -7,7 +7,7 @@
 
 <h:head>
 
-	<title>Student Three Registration Form</title>
+	<title>Register</title>
 
 	<style>
 .error {
@@ -19,41 +19,31 @@
 
 <h:body>
 
+
 	<h:form>
-First name: <h:inputText value="#{studentThree.firstName}"
-			label="First name" />
-		<br></br>
-
-Last name: <h:inputText value="#{studentThree.lastName}"
-			label="Last name" id="last_name" required="true"
-			requiredMessage="Last name is mandatory" />
-
-		<h:message for="last_name" styleClass="error"></h:message>
-		<br></br>
-		
-Phone number: <h:inputText value="#{studentThree.phoneNumber}"
-			label="Phone number" id="phone_number" required="true"
-			requiredMessage="Phone number must follow xxx-xxx-xxxx">
-
-			<f:validateRegex pattern="\d{3}-\d{3}-\d{4}"></f:validateRegex>
-
-		</h:inputText>
-
-		<h:message for="phone_number" styleClass="error"></h:message>
-		<br></br>
-
-Course Code:		<h:inputText value="#{studentThree.courseCode}"
-			label="Course Code" id="course_code" required="true"
-			requiredMessage="You need to insert the course code"
-			validator="#{studentThree.validateTheCourseCode}" />
-
-		<h:message for="course_code" styleClass="error"></h:message>
-		
+Username
 		 <br></br>
-		
-		<h:commandButton value="Submit" action="student_three_response"></h:commandButton>
+
+		<h:inputText id="username" label="Username" />
+
+		<br></br>
+Email
+ 		<br></br>
+
+		<h:inputText id="email" label="Email" />
+		<br></br>
+
+Password 
+		<br></br>
+
+		<h:inputText id="password" label="Password" />
+
+		<br></br>
+
+		<h:commandButton value="Register" action="student_three_response"></h:commandButton>
 	</h:form>
 
 </h:body>
+
 
 </html>
