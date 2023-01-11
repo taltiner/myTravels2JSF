@@ -6,6 +6,8 @@
 
 
 <h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<title>Register</title>
 
@@ -24,23 +26,23 @@
 Username
 		 <br></br>
 
-		<h:inputText id="username" label="Username" />
+		<h:inputText value="#{user.username}" />
 
 		<br></br>
 Email
  		<br></br>
 
-		<h:inputText id="email" label="Email" />
+		<h:inputText value="#{user.email}" />
 		<br></br>
 
 Password 
 		<br></br>
 
-		<h:inputText id="password" label="Password" />
+		<h:inputText value="#{user.password}"  />
 
 		<br></br>
 
-		<h:commandButton value="Register" action="student_three_response"></h:commandButton>
+		<h:commandButton value="Save" action="#{userController.addUser(user)}"></h:commandButton>
 	</h:form>
 
 </h:body>
