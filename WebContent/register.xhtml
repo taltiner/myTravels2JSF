@@ -8,6 +8,7 @@
 <h:head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet library="css" name="register.css" />
 
 	<title>Register</title>
 
@@ -16,36 +17,49 @@
 	color: red
 }
 </style>
-
 </h:head>
 
 <h:body>
+	<h:messages globalOnly="true" />
 
+	<div class="container">
 
-	<h:form>
+		<div>
+			<h:form>
 Username
 		 <br></br>
 
-		<h:inputText value="#{user.username}" />
+				<h:inputText value="#{user.username}" required="true" id="username"
+					requiredMessage="Username is mandatory" />
+				<h:message for="username" styleClass="error" />
 
-		<br></br>
+				<br></br>
 Email
  		<br></br>
 
-		<h:inputText value="#{user.email}" />
-		<br></br>
+				<h:inputText value="#{user.email}" required="true" id="email"
+					requiredMessage="Email is mandatory" />
+				<h:message for="email" styleClass="error" />
+
+				<br></br>
 
 Password 
 		<br></br>
 
-		<h:inputText value="#{user.password}"  />
+				<h:inputText value="#{user.password}" required="true" id="password"
+					requiredMessage="Password is missing" />
+				<h:message for="password" styleClass="error" />
 
-		<br></br>
 
-		<h:commandButton value="Save" action="#{userController.addUser(user)}"></h:commandButton>
-	</h:form>
+				<br></br>
+
+				<h:commandButton value="Save"
+					action="#{userController.addUser(user)}"></h:commandButton>
+			</h:form>
+
+		</div>
+	</div>
 
 </h:body>
-
 
 </html>
