@@ -49,6 +49,6 @@ public class UserController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "home?faces-redirect=true";
+		return "mytravels?faces-redirect=true";
 	}
 }

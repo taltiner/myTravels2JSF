@@ -19,6 +19,10 @@
 		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
 		<param-value>resources.application</param-value>
 	</context-param>
+	<context-param>
+		<param-name>org.jboss.jbossfaces.WAR_BUNDLES_JSF_IMPL</param-name>
+		<param-value>true</param-value>
+	</context-param>
 	<listener>
 		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>
 	</listener>
@@ -28,7 +32,6 @@
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>
-	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
